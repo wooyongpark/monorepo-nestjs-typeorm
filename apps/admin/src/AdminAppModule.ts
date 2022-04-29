@@ -3,21 +3,24 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '@app/entity/domain/user/User.entity';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { UserApiModule } from '../../api/src/user/UserApiModule';
+import { Group } from '@app/entity/domain/group/Group.entity';
+import { UserAdminModule } from './user/UserAdminModule';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'test',
-      password: 'test',
-      database: 'test',
-      entities: [User],
-      synchronize: true,
+      type: 'mysql',
+      host: '127.0.0.1',
+      port: 3306,
+      username: 'root',
+      password: 'January2011',
+      database: 'mywork',
+      entities: [User, Group],
+      synchronize: false,
+      autoLoadEntities: true,
       namingStrategy: new SnakeNamingStrategy(),
     }),
-    UserApiModule,
+    UserAdminModule,
   ],
 })
 export class AdminAppModule {}

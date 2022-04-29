@@ -7,6 +7,7 @@ export class UserName {
   @Expose({ name: 'user_last_name' })
   lastName: string;
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   getFullName(): string {

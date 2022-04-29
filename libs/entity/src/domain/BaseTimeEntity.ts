@@ -11,9 +11,9 @@ export abstract class BaseTimeEntity {
   @PrimaryColumn({ type: 'bigint', transformer: new BigintValueTransformer() })
   id: number;
 
-  @CreateDateColumn({ type: 'timestamptz' })
+  @CreateDateColumn({ type: 'datetime' })
   createdAt: Date;
 
-  @UpdateDateColumn({ type: 'timestamptz' })
+  @UpdateDateColumn({ type: 'datetime' })
   updatedAt: Date;
 }

@@ -12,6 +12,7 @@ export class HackerNewsItem {
   type: string;
   url: string;
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   get createTime(): LocalDateTime {

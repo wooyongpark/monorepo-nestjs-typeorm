@@ -8,6 +8,7 @@ import { HtmlTemplate } from '@app/utils/HtmlTemplate';
     WinstonModule.forRoot(
       getWinstonLogger(process.env.NODE_ENV || '', 'htmlTemplate'),
     ),
+    HtmlTemplate,
   ],
   exports: [HtmlTemplate],
 })

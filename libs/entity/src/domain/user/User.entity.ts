@@ -38,14 +38,14 @@ export class User extends BaseTimeEntity {
   isActive: boolean;
 
   @Column({
-    type: 'timestamptz',
+    type: 'datetime',
     transformer: new LocalDateTransformer(),
     nullable: true,
   })
   orderDate: LocalDate;
 
   @Column({
-    type: 'timestamptz',
+    type: 'datetime',
     transformer: new LocalDateTimeTransformer(),
     nullable: true,
   })
