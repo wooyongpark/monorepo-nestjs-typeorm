@@ -13,7 +13,7 @@ import { UserAdminModule } from './user/UserAdminModule';
       host: '127.0.0.1',
       port: 3306,
       username: 'root',
-      password: 'January2011',
+      password: '',
       database: 'mywork',
       entities: [User, Group],
       synchronize: false,
